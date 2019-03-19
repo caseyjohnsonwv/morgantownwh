@@ -9,3 +9,5 @@ api = twitter.Api(	consumer_key = "WmJlz4YogcfCFHf78G45JmQ4W",
 while True:
 	api.PostUpdate('No.')
 	time.sleep(86400)
+	
+#after pushing, call 'heroku ps:scale worker=1' to init one instance
