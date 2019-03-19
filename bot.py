@@ -7,5 +7,5 @@ api = twitter.Api(	consumer_key = "WmJlz4YogcfCFHf78G45JmQ4W",
 					access_token_secret = "ZhoUJbggGsu1F06pTgc7vPaZ3C7LEq2GMvSBhkYKfrMHV")
 
 while True:
-	api.PostUpdate('No')
+	api.PostUpdate('No.')
 	time.sleep(86400)
