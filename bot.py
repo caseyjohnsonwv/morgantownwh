@@ -6,4 +6,6 @@ api = twitter.Api(	consumer_key = "WmJlz4YogcfCFHf78G45JmQ4W",
 					access_token_key = "1108033076167364608-F7pygEJqqu50bESbG7Pjw60z1gjHf6",
 					access_token_secret = "ZhoUJbggGsu1F06pTgc7vPaZ3C7LEq2GMvSBhkYKfrMHV")
 
-api.PostUpdate('No')
+while True:
+	api.PostUpdate('No')
+	time.sleep(86400)
