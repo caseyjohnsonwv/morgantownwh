@@ -7,6 +7,27 @@ api = twitter.Api(	consumer_key = "WmJlz4YogcfCFHf78G45JmQ4W",
 					access_token_secret = "ZhoUJbggGsu1F06pTgc7vPaZ3C7LEq2GMvSBhkYKfrMHV")
 
 while True:
+#analytics DM
+	old_followers = 0
+
+	account = api.GetUser(user_id=1108033076167364608)
+	rts = account.status.retweet_count
+	likes = account.status.favorite_count
+
+	followers = account.followers_count
+	delta_followers = followers - old_followers
+
+	if (delta_followers >= 0):
+		df_string = "+%d" % (delta_followers)
+	else:
+		df_string = "-%d" % (delta_followers)
+
+	msg = "Last Tweet Analytics:\nRTs: %d\nLikes: %d\n\nAccount Analytics:\nFollowers: %d (%s)" % (rts, likes, followers, df_string)
+
+	api.PostDirectMessage(msg, user_id=403837992)
+	old_followers = followers
+#end analytics DM
+	
 	api.PostUpdate('No.')
 	time.sleep(86400)
 	
