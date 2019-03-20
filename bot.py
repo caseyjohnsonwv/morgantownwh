@@ -28,7 +28,7 @@ while True:
 	old_followers = followers
 #end analytics DM
 	
-	api.PostUpdate('No.')
+	#api.PostUpdate('No.')
 	time.sleep(86400)
 	
 #after pushing, call 'heroku ps:scale worker=1' to init one instance
