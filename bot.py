@@ -42,8 +42,6 @@ def main():
 			last_tweet.favorite_count,
 		]
 		msg = """
-Daily status update:
-
 Followers: {}
 ---
 Last Tweet:
