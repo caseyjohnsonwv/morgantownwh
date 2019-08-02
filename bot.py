@@ -12,7 +12,6 @@ try:
 	CONSUMER_SECRET = str(os.environ['CONSUMER_SECRET'])
 	ENV_NAME = str(os.environ['ENV_NAME'])
 	PERSONAL_TWITTER_ID = int(os.environ['PERSONAL_TWITTER_ID'])
-	REPO_LINK = str(os.environ['REPO_LINK'])
 except Exception as ex:
 	print("Failed to load environment variables.")
 	print(ex)
@@ -51,9 +50,7 @@ Last Tweet:
 Date: {}
 RTs: {}
 Likes: {}
-
-GitHub link: {}
-		""".format(*data, REPO_LINK)
+		""".format(*data)
 	except Exception as ex:
 		print("Failed to create analytics DM.")
 		print(ex)
