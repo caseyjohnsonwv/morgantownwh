@@ -50,7 +50,6 @@ Likes: {}
 	except Exception as ex:
 		print("Failed to create analytics DM.")
 		print(ex)
-		exit()
 
 	if 'prod' in ENV_NAME.lower():
 		print("Posting update to Twitter.")
@@ -67,7 +66,6 @@ Likes: {}
 		except Exception as ex:
 			print("Failed to send analytics DM.")
 			print(ex)
-			exit()
 	else:
 		print(tweet)
 		print(msg)
