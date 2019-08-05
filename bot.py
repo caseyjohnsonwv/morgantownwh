@@ -14,7 +14,6 @@ try:
 	PERSONAL_TWITTER_ID = int(os.environ['PERSONAL_TWITTER_ID'])
 except Exception as ex:
 	print("Failed to load environment variables.")
-	print(ex)
 
 
 #authenticate to Twitter API
@@ -22,7 +21,6 @@ try:
 	api = twitter.Api(consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET, access_token_key=ACCESS_TOKEN_KEY, access_token_secret=ACCESS_TOKEN_SECRET)
 except Exception as ex:
 	print("Failed to authenticate to Twitter.")
-	print(ex)
 	exit()
 
 
